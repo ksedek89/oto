@@ -1,0 +1,14 @@
+{
+  "name": "Otodom",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.otodom.pl/**"],
+      "js": ["jquery-3.6.0.min.js","content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+
+  "permissions": ["tabs", "storage"]
+}

@@ -55,6 +55,9 @@ $( "article" ).each(function( index ) {
 $( "textarea" ).each(function( index ) {
     var element = this;
     var linkId = $(this).parent().parent().next().find(".offer-title__link").attr("data-ad-id");
+    if(linkId == null){
+        return;
+    }
     chrome.storage.sync.get([linkId], function(result) {
         var comment = result[linkId];
         $(element).val(comment);
