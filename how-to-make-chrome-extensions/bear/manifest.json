@@ -1,0 +1,16 @@
+{
+  "name": "Otomoto",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.otomoto.pl/**"],
+      "js": ["jquery-3.6.0.min.js","content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Otomoto"
+  },
+  "permissions": ["tabs", "storage"]
+}
